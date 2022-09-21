@@ -88,3 +88,39 @@
     opacity: 0;
   }
 }
+
+@keyframes transformNotification {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes transformNotificationMobile {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(80%);
+  }
+}
+
+@keyframes openMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hideMessage {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
