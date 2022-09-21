@@ -1,0 +1,118 @@
+.form {
+  width: 100%;
+  transition: all 4s ease;
+
+  &__section {
+    width: 400px;
+    margin: auto;
+
+    &-open {
+      margin: 40px auto;
+      text-align: center;
+
+      @include onDesktop375px {
+        margin: 0;
+        width: 100vw;
+      }
+
+      &-btn {
+        width: 300px;
+        height: 70px;
+      }
+    }
+  }
+
+  &__block {
+    width: 100%;
+    position: relative;
+    padding: 30px;
+    border: 1px solid $colorFonts;
+    border-radius: 30px;
+    box-shadow: 13px 14px 13px 0 rgba(17, 28, 47, 0.39);
+    background-color: $colorBackground;
+
+    @include onDesktop640px {
+      width: 350px;
+      margin: 0 auto;
+    }
+
+    @include onDesktop375px {
+      width: 90vw;
+    }
+
+    &-placeholder {
+      position: absolute;
+      pointer-events: none;
+      @extend %WorkSans-Regular;
+      font-size: 15px;
+      bottom: 10px;
+      transition: 0.2s ease all;
+    }
+
+    &-cross {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-image: url("../images/close.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      animation: rotate-out 2s ease;
+
+      &:hover {
+        animation: rotate-in 2s ease;
+      }
+    }
+
+    &-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    &-input {
+      border-bottom: 1px solid $colorFonts;
+      padding-bottom: 5px;
+      background-color: $colorBackground;
+      transition: all 0.5s ease;
+    }
+
+    &-button-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+  }
+}
+
+input:focus ~ .form__block-placeholder,
+input:not(:focus):valid ~ .form__block-placeholder {
+  top: -15px;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.open-form {
+  animation: openForm 2s ease forwards;
+}
+
+.hide-form {
+  animation: hideForm 2s ease forwards;
+}
+
+.hide-form-start {
+  transform: translateY(-200%);
+}
+
+.open {
+  animation: opacityOpenButton 1s ease backwards;
+  animation-delay: 1s;
+}
+
+.hide {
+  animation: opacityHideButton 1s ease forwards;
+}

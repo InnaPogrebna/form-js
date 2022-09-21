@@ -1,0 +1,21 @@
+.header {
+  margin: 50px auto;
+  width: 100%;
+
+  @include onDesktop375px {
+    margin: 30px auto;
+  }
+
+  &__title {
+    text-align: center;
+    @extend %WorkSans-Bold;
+    font-size: 80px;
+    color: $colorFonts;
+    animation: titleAnimation 1s ease-in-out;
+    animation-fill-mode: forwards;
+
+    @include onDesktop375px {
+      font-size: 40px;
+    }
+  }
+}

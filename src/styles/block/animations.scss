@@ -1,0 +1,90 @@
+@keyframes openForm {
+  from {
+    transform: translateY(-200%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes opacityHideButton {
+  from {
+    opacity: 1;
+    height: auto;
+  }
+
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@keyframes opacityOpenButton {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+@keyframes hideForm {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translateY(0);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+@keyframes rotate-in {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-out {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shiny {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}

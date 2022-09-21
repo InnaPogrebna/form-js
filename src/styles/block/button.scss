@@ -1,0 +1,54 @@
+.button {
+  color: $colorFonts;
+  @extend %WorkSans-Bold;
+  font-size: 30px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  background: linear-gradient(
+    0deg,
+    rgb(255, 239, 60) 0%,
+    rgb(229, 234, 76) 100%
+  );
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0 rgba(0, 0, 0, 0.1);
+  outline: none;
+
+  @include onDesktop375px {
+    width: 250px;
+  }
+}
+
+.button:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.button:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny 3s ease-in-out infinite;
+}
+
+.button:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button:disabled {
+  opacity: 0.5;
+}

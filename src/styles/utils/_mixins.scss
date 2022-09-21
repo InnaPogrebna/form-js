@@ -1,0 +1,11 @@
+@mixin onDesktop375px {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin onDesktop640px {
+  @media (max-width: 640px) {
+    @content;
+  }
+}

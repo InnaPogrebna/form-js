@@ -1,0 +1,106 @@
+.notification {
+  background-image: url("../images/succsess.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 240px;
+  height: 400px;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  transform: translateY(200%);
+  animation: transformNotification 1s ease forwards;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+
+  @include onDesktop375px {
+    left: -20px;
+    animation: transformNotificationMobile 1s ease forwards;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+
+  &__message {
+    position: absolute;
+    bottom: 330px;
+    left: 180px;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    @extend %WorkSans-Regular;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: openMessage 1s ease forwards;
+
+    @include onDesktop375px {
+      bottom: 45px;
+      left: 130px;
+    }
+
+    &-start {
+      text-align: center;
+      left: 130px;
+      padding: 10px;
+      opacity: 0;
+      animation: openMessage 1s ease forwards;
+      animation-delay: 2.5s;
+
+      @include onDesktop375px {
+        top: -20px;
+        left: 130px;
+      }
+
+      &--hide {
+        opacity: 1;
+        animation: hideMessage 3s ease forwards;
+      }
+    }
+  }
+
+  &__error {
+    background-image: url("../images/error.png");
+  }
+}
+
+h2 {
+  color: rgb(208, 83, 83);
+  margin-bottom: 10px;
+}
+
+@keyframes transformNotification {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes transformNotificationMobile {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(80%);
+  }
+}
+
+@keyframes openMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hideMessage {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

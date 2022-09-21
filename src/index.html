@@ -6,67 +6,68 @@
     <title>Tabs</title>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
-  <body>
+  <body class="page">
     <header class="header">
-      <h1 class="title">Tabs</h1>
+      <h1 class="header__title">Form</h1>
     </header>
-    <main class="tabs-wrapper">
-      <section class="tabs-wrapper__links">
-        <a href="#" class="tabs-wrapper__links_link">Lorem ipsum</a>
-        <a href="#" class="tabs-wrapper__links_link">Dolor sit</a>
-        <a href="#" class="tabs-wrapper__links_link">Amet</a>
-        <a href="#" class="tabs-wrapper__links_link">Consecrator</a>
+    <main class="form">
+      <section class="form__section">
+        <div class="form__section-open open">
+          <button class="form__section-open-btn button">
+            Open form
+          </button>
+        </div>
+        <form class="form__block hide-form-start">
+          <div class="form__block-cross"></div>
+          <div class="form__block-item">
+            <input class="form__block-input"
+              id="user"
+              name="user"
+              type="text"
+              required
+            />
+            <span class="form__block-placeholder">User</span>
+          </div>
+          <div class="form__block-item">
+            <input class="form__block-input"
+              id="name"
+              name="name"
+              type="text"
+              required
+            />
+            <span class="form__block-placeholder">Name</span>
+          </div>
+          <div class="form__block-item">
+            <input class="form__block-input"
+              id="email"
+              name="email"
+              type="email"
+              required
+            />
+            <span class="form__block-placeholder">Email</span>
+          </div>
+          <div class="form__block-item">
+            <input class="form__block-input"
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+            />
+            <span class="form__block-placeholder">Phone</span>
+          </div>
+          <div class="form__block-button-wrapper">
+            <button class="form__block-button button" type="submit">Submit</button> 
+          </div>
+        </form>
       </section>
-      <section class="tabs-wrapper__contents">
-        <article class="tabs-wrapper__contents_content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iste adipisci 
-          vero voluptas temporibus unde sequi doloremque expedita excepturi dolores sed, iure 
-          sapiente aliquid voluptatibus ullam at accusantium saepe libero placeat impedit. Facilis 
-          aspernatur sunt explicabo alias cumque, 
-          libero maxime quos architecto molestiae ab voluptas magni quas, deleniti soluta ut.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iste adipisci 
-          vero voluptas temporibus unde sequi doloremque expedita excepturi dolores sed, iure 
-          sapiente aliquid voluptatibus ullam at accusantium saepe libero placeat impedit. Facilis 
-          aspernatur sunt explicabo alias cumque, 
-          libero maxime quos architecto molestiae ab voluptas magni quas, deleniti soluta ut.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iste adipisci 
-          vero voluptas temporibus unde sequi doloremque expedita excepturi dolores sed, iure 
-          sapiente aliquid voluptatibus ullam at accusantium saepe libero placeat impedit. Facilis 
-          aspernatur sunt explicabo alias cumque, 
-          libero maxime quos architecto molestiae ab voluptas magni quas, deleniti soluta ut.
-        </article>
-        <article class="tabs-wrapper__contents_content">
-          Dolorum reiciendis, distinctio totam, optio adipisci expedita exercitationem consequuntur!
-          Nemo, optio veniam possimus culpa fuga consequatur doloremque delectus, velit temporibus 
-          assumenda suscipit, non tempora perspiciatis tenetur inventore. Mollitia voluptas nihil 
-          voluptates aut inventore doloribus alias quam reiciendis sequi laborum nam, nobis autem? 
-          Harum iure cumque inventore nulla, autem totam accusamus consequatur, quae ab id,
-          reprehenderit dicta distinctio voluptates! Perferendis aspernatur iste, atque accusantium 
-          sapiente, blanditiis soluta ex eum officiis dolor earum accusamus temporibus ipsa quo.
-        </article>
-        <article class="tabs-wrapper__contents_content">
-          Laborum distinctio suscipit reiciendis quos illo accusamus, et laudantium alias. Omnis aut 
-          facere nisi. Dolorum saepe eaque nobis velit eligendi quis tenetur deserunt, facere 
-          praesentium exercitationem. Impedit nam molestias consectetur possimus repudiandae sint 
-          quisquam molestiae at earum necessitatibus, placeat quam velit ullam. Sequi recusandae 
-          aliquid quasi provident quae aliquam laboriosam laborum mollitia earum id itaque 
-          consectetur assumenda modi nihil corporis architecto doloremque, magnam magni hic? 
-          Tenetur consectetur obcaecati doloribus, hic officiis odit deserunt temporibus nesciunt
-          dicta dolorem rem quae, quo vitae dolores reiciendis repellendus qui, tempore minima
-          deleniti doloremque quia voluptates. Aspernatur neque corrupti itaque doloribus quo
-          error ipsa. Quaerat quas voluptatum quo numquam?
-        </article>
-        <article class="tabs-wrapper__contents_content">
-          Sequi recusandae 
-          aliquid quasi provident quae aliquam laboriosam laborum mollitia earum id itaque 
-          consectetur assumenda modi nihil corporis architecto doloremque, magnam magni hic? 
-          Tenetur consectetur obcaecati doloribus, hic officiis odit deserunt temporibus nesciunt
-          dicta dolorem rem quae, quo vitae dolores reiciendis repellendus qui, tempore minima
-          deleniti doloremque quia voluptates. Aspernatur neque corrupti itaque doloribus quo
-          error ipsa. Quaerat quas voluptatum quo numquam?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Magnam nisi maxime in doloremque beatae dolor eaque deleniti? Nesciunt, rem ullam.
-        </article>
+      <section class="notification">
+        <div class="notification__message notification__message__start">
+          <p>
+            <strong>Hello!</strong>
+            <br>
+            Please open and fill out this form
+          </p>
+        </div>
       </section>
     </main>
     <script type="text/javascript" src="scripts/main.js"></script>
