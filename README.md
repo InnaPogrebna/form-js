@@ -1,2 +1,2 @@
 ##Tabs Javascript
-- [DEMO LINK](https://InnaPogrebna.github.io/tab_js/)
+- [DEMO LINK](https://innapogrebna.github.io/form-js/)
