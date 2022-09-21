@@ -30,6 +30,7 @@ openForm.addEventListener('click', (event) => {
 
 closeForm.addEventListener('click', (event) => {
   event.preventDefault();
+  startNotification.classList.toggle('notification__message-start--hide');
   form.classList.remove('open-form');
   form.classList.add('hide-form');
   openForm.classList.remove('hide');
